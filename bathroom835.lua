@@ -27,7 +27,7 @@ PlayerHub:AddSlider({
 
 PlayerHub:AddSlider({
 	Name = "Jump Power",
-	Min = 16,
+	Min = 50,
 	Max = 500,
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
@@ -35,6 +35,23 @@ PlayerHub:AddSlider({
 	ValueName = "",
 	Callback = function(Value)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
+local Section = PlayerHub:AddSection({
+	Name = "Extra"
+})
+
+PlayerHub:AddSlider({
+	Name = "Health",
+	Min = 1,
+	Max = 100,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "",
+	Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.Health = Value
 	end    
 })
 
@@ -107,3 +124,4 @@ PlayerHub3:AddButton({
         game:GetService("ReplicatedStorage").EntityInfo.PlayAgain:FireServer()
   	end    
 })
+
