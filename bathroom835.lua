@@ -674,6 +674,42 @@ PlayerHub4:AddButton({
 })
 
 local Section = PlayerHub4:AddSection({
+	Name = "Teleport"
+})
+
+PlayerHub4:AddButton({
+	Name = "Basement",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(65.4981460571289, -15.38408088684082, -159.3509521484375)}):Play()
+  	end    
+})
+
+PlayerHub4:AddButton({
+	Name = "Market",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-427.3850402832031, 3.1500473022460938, -118.20350646972656)}):Play()
+  	end    
+})
+
+PlayerHub4:AddButton({
+	Name = "Attic",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-19.899324417114258, 34.711219787597656, -220.7581024169922)}):Play()
+  	end    
+})
+
+PlayerHub4:AddButton({
+	Name = "Leave the house",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-37.21944808959961, 2.6188392639160156, -159.7238311767578)}):Play()
+  	end    
+})
+
+local Section = PlayerHub4:AddSection({
 	Name = "Extra"
 })
 
