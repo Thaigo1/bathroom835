@@ -1,6 +1,41 @@
+-- Username: bathroom835
+
+
+
+
+--------------------------------??--------------------------------
+
+--[[
+    ███        ▄█    █▄     ▄█     ▄████████    ▄██████▄   ▄██████▄  
+▀█████████▄   ███    ███   ███    ███    ███   ███    ███ ███    ███ 
+   ▀███▀▀██   ███    ███   ███▌   ███    ███   ███    █▀  ███    ███ 
+    ███   ▀  ▄███▄▄▄▄███▄▄ ███▌   ███    ███  ▄███        ███    ███ 
+    ███     ▀▀███▀▀▀▀███▀  ███▌ ▀███████████ ▀▀███ ████▄  ███    ███ 
+    ███       ███    ███   ███    ███    ███   ███    ███ ███    ███ 
+    ███       ███    ███   ███    ███    ███   ███    ███ ███    ███ 
+   ▄████▀     ███    █▀    █▀     ███    █▀    ████████▀   ▀██████▀  
+By: ! Thaigo#3489
+]]
+
+--------------------------------??--------------------------------
+
+
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "bathroom835 tools", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Player = game.Players.LocalPlayer
+
+OrionLib:MakeNotification({
+	Name = "Executing . . .",
+	Content = "Ty "..Player.Name.."! for using bathroom835 tools.",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+wait(5)
+
+local Window = OrionLib:MakeWindow({Name = "bathroom835 tools", HidePremium = false, SaveConfig = true, IntroEnabled = false})
 
 local PlayerHub = Window:MakeTab({
 	Name = "Player",
@@ -17,7 +52,7 @@ PlayerHub:AddSlider({
 	Min = 16,
 	Max = 500,
 	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
+	Color = Color3.fromRGB(245, 205, 48),
 	Increment = 1,
 	ValueName = "",
 	Callback = function(Value)
@@ -30,7 +65,7 @@ PlayerHub:AddSlider({
 	Min = 50,
 	Max = 500,
 	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
+	Color = Color3.fromRGB(245, 205, 48),
 	Increment = 1,
 	ValueName = "",
 	Callback = function(Value)
@@ -47,13 +82,21 @@ PlayerHub:AddSlider({
 	Min = 1,
 	Max = 100,
 	Default = 100,
-	Color = Color3.fromRGB(255,255,255),
+	Color = Color3.fromRGB(196, 40, 28),
 	Increment = 1,
 	ValueName = "",
 	Callback = function(Value)
         game.Players.LocalPlayer.Character.Humanoid.Health = Value
 	end    
 })
+
+
+
+
+--------------------------------*--------------------------------
+
+
+
 
 local PlayerHub2 = Window:MakeTab({
 	Name = "Scripts",
@@ -483,6 +526,14 @@ end)
   	end    
 })
 
+
+
+
+--------------------------------*--------------------------------
+
+
+
+
 local PlayerHub3 = Window:MakeTab({
 	Name = "Doors",
 	Icon = "rbxassetid://4483345998",
@@ -517,6 +568,14 @@ PlayerHub3:AddButton({
         game:GetService("ReplicatedStorage").EntityInfo.PlayAgain:FireServer()
   	end    
 })
+
+
+
+
+--------------------------------*--------------------------------
+
+
+
 
 local PlayerHub4 = Window:MakeTab({
 	Name = "Break In",
@@ -729,4 +788,53 @@ PlayerHub4:AddButton({
 	Callback = function()
 		game:GetService("ReplicatedStorage").RemoteEvents.UnlockDoor:FireServer()
   	end    
+})
+
+
+
+
+--------------------------------*--------------------------------
+
+
+
+
+-- Nothing 
+
+
+
+
+--------------------------------*--------------------------------
+
+
+function DiscordCopy()
+    OrionLib:MakeNotification({
+        Name = ""..Player.Name.."",
+        Content = "Join discord.gg/jmzm",
+        Image = "rbxassetid://4483345998",
+        Time = 5    
+    })
+end
+
+local PlayerHub50 = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PlayerHub50:AddSection({
+	Name = "Misc"
+})
+
+PlayerHub50:AddButton({
+	Name = "Exit",
+	Callback = function()
+        OrionLib:Destroy() 	
+    end  
+})
+
+PlayerHub50:AddButton({
+	Name = "Discord",
+	Callback = function()
+      	DiscordCopy()
+    end  
 })
