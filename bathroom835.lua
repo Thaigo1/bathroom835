@@ -808,6 +808,13 @@ PlayerHub5:AddButton({
     end    
 })
 
+PlayerHub5:AddButton({
+	Name = "Simple Seller",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/BetterDaHood/BetterDaHoodCrasher/main/Crash'))()
+    end    
+})
+
 
 
 
@@ -1072,6 +1079,3 @@ PlayerHub50:AddButton({
         OrionLib:Destroy() 	
     end  
 })
-
-
-
