@@ -129,10 +129,6 @@ PlayerHub2:AddButton({
   	end    
 })
 
-local Section = PlayerHub2:AddSection({
-	Name = "Animation Script"
-})
-
 PlayerHub2:AddButton({
 	Name = "Animation Script (Requires R15)",
 	Callback = function()
@@ -535,38 +531,246 @@ end)
 
 
 local PlayerHub3 = Window:MakeTab({
-	Name = "Doors",
+	Name = "Da Hood",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+PlayerHub3:AddButton({
+	Name = "Lock",
+	Callback = function()
+        getgenv().RecurringPoint = "UpperTorso"
+        getgenv().Hitbox = "UpperTorso"
+        getgenv().Keybind = "q" -- lock keybind
+        getgenv().AimbotStrengthAmount = 0.0421
+        getgenv().PredictionAmount = 11
+        getgenv().Radius = 25
+        getgenv().UsePrediction = true
+        getgenv().AimbotStrength = true
+        getgenv().FirstPerson = true
+        getgenv().ThirdPerson = true
+        getgenv().TeamCheck = false
+        getgenv().Enabled = true
+        
+        
+        -- main script use with silent aim
+        
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ChaseSYNX/Scripts/main/Streamable-Camlock"))()
+    end    
+})
+
 local Section = PlayerHub3:AddSection({
-	Name = "Scripts"
+	Name = ""
+})
+
+PlayerHub3:AddLabel("TELEPORTS")
+
+local Section = PlayerHub3:AddSection({
+	Name = "Important"
 })
 
 PlayerHub3:AddButton({
-	Name = "Vynixu",
+	Name = "Key",
 	Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
-  	end    
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-271.0025634765625, 21.7499942779541, -241.7822265625)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "Surgeon Mask",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-271.8338928222656, 21.749998092651367, -280.7125244140625)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "Lettuce",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-80.05623626708984, 22.700288772583008, -632.5528564453125)}):Play()
+    end    
 })
 
 local Section = PlayerHub3:AddSection({
-	Name = "Extra"
+	Name = "Guns"
 })
 
 PlayerHub3:AddButton({
-	Name = "Revive",
+	Name = "Revolver",
 	Callback = function()
-        game:GetService("ReplicatedStorage").EntityInfo.Revive:FireServer()
-  	end    
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-643.4028930664062, 21.7499942779541, -124.07659912109375)}):Play()
+    end    
 })
 
 PlayerHub3:AddButton({
-	Name = "Play Again",
+	Name = "Double-Barrel",
 	Callback = function()
-        game:GetService("ReplicatedStorage").EntityInfo.PlayAgain:FireServer()
-  	end    
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-1043.34912109375, 21.7499942779541, -263.49609375)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "RPG",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(113.38407897949219, -26.750032424926758, -276.45111083984375)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "Grenade Launcher",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-963.7249755859375, -0.984458327293396, 468.4135437011719)}):Play()
+    end    
+})
+
+local Section = PlayerHub3:AddSection({
+	Name = "Armor"
+})
+
+PlayerHub3:AddButton({
+	Name = "Armor + Fire Armor",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(94.97248840332031, 25.639123916625977, -891.8451538085938)}):Play()
+    end    
+})
+
+local Section = PlayerHub3:AddSection({
+	Name = "Shops"
+})
+
+PlayerHub3:AddButton({
+	Name = "Uphill Gunz",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(482.09442138671875, 48.07049560546875, -623.1278686523438)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "Downhill Gunz",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-580.1693115234375, 8.314779281616211, -735.9893188476562)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "Food",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-327.77203369140625, 23.682640075683594, -291.3675842285156)}):Play()
+    end    
+})
+
+local Section = PlayerHub3:AddSection({
+	Name = "Money"
+})
+
+PlayerHub3:AddButton({
+	Name = "Bank",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-477.9008483886719, 23.087936401367188, -283.334716796875)}):Play()
+    end    
+})
+
+
+PlayerHub3:AddButton({
+	Name = "ATM1",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-400.3786315917969, 21.75499725341797, -589.258544921875)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM2",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-450.9891052246094, 21.7499942779541, -333.7717590332031)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM3",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-3.3052818775177, 21.7499942779541, -99.39457702636719)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM4",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-807.0822143554688, 21.7499942779541, -286.79193115234375)}):Play()
+    end    
+})
+
+
+PlayerHub3:AddButton({
+	Name = "ATM5",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-947.5037841796875, 21.25499153137207, -176.1923370361328)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM6",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(583.29638671875, 49.000030517578125, -276.9158020019531)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM7",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(515.908447265625, 47.99998474121094, -302.7449035644531)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM8",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(588.0584716796875, 51.05766677856445, -462.0079345703125)}):Play()
+    end    
+})
+
+PlayerHub3:AddButton({
+	Name = "ATM9",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-219.86111450195312, 21.899866104125977, -790.444580078125)}):Play()
+    end    
+})
+
+local Section = PlayerHub3:AddSection({
+	Name = ""
+})
+
+PlayerHub3:AddLabel("SECRET ADMIN PLACE")
+
+local Section = PlayerHub3:AddSection({
+	Name = "Secret"
+})
+
+PlayerHub3:AddButton({
+	Name = "Admin",
+	Callback = function()
+        tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(3, Enum.EasingStyle.Linear)
+        tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(-871.514892578125, -32.64921188354492, -653.4800415039062)}):Play()
+    end    
 })
 
 
@@ -574,6 +778,23 @@ PlayerHub3:AddButton({
 
 --------------------------------*--------------------------------
 
+
+
+
+local PlayerHub5 = Window:MakeTab({
+	Name = "Da Hood - Shop",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = PlayerHub3:AddSection({
+	Name = ""
+})
+
+
+
+
+--------------------------------*--------------------------------
 
 
 
