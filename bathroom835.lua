@@ -787,8 +787,25 @@ local PlayerHub5 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = PlayerHub3:AddSection({
-	Name = ""
+PlayerHub5:AddButton({
+	Name = "Iku - Cash Counter",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/OG5/IkuScripts/main/DH/MoneyCounter', true))()
+    end  
+})
+
+PlayerHub5:AddButton({
+	Name = "Crostide's Selling Gui",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Crostide/cdhc/main/gui"))()
+    end    
+})
+
+PlayerHub5:AddButton({
+	Name = "Simple Seller",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/W9K/roblox-scripts/main/DHC/SimpleSeller.lua", true))()
+    end    
 })
 
 
@@ -1042,8 +1059,11 @@ local PlayerHub50 = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Section = PlayerHub50:AddSection({
-	Name = "Misc"
+PlayerHub50:AddButton({
+	Name = "Discord",
+	Callback = function()
+      	DiscordCopy()
+    end  
 })
 
 PlayerHub50:AddButton({
@@ -1053,9 +1073,5 @@ PlayerHub50:AddButton({
     end  
 })
 
-PlayerHub50:AddButton({
-	Name = "Discord",
-	Callback = function()
-      	DiscordCopy()
-    end  
-})
+
+
