@@ -809,7 +809,7 @@ PlayerHub5:AddButton({
 })
 
 PlayerHub5:AddButton({
-	Name = "Simple Seller",
+	Name = "BetterDaHoodCrasher",
 	Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/BetterDaHood/BetterDaHoodCrasher/main/Crash'))()
     end    
